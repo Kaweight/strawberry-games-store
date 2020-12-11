@@ -14,31 +14,7 @@ const Content = () => {
         <BestselleryCard CardInfo={CardsInfo[0]} />
       </Grid>
       <Grid item xs={4} sm={4} md={2}>
-        <BestselleryCard />
-      </Grid>
-      <Grid item xs={4}>
-        <BestselleryCard />
-      </Grid>
-      <Grid item xs={4}>
-        <BestselleryCard />
-      </Grid>
-      <Grid item xs={2}>
-        <BestselleryCard />
-      </Grid>
-      <Grid item xs={2}>
-        <BestselleryCard />
-      </Grid>
-      <Grid item xs={2}>
-        <BestselleryCard />
-      </Grid>
-      <Grid item xs={2}>
-        <BestselleryCard />
-      </Grid>
-      <Grid item xs={2}>
-        <BestselleryCard />
-      </Grid>
-      <Grid item xs={2}>
-        <BestselleryCard />
+        <BestselleryCard CardInfo={CardsInfo[1]} />
       </Grid>
     </Grid>
   )
