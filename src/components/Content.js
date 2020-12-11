@@ -16,6 +16,12 @@ const Content = () => {
       <Grid item xs={4} sm={4} md={2}>
         <BestselleryCard CardInfo={CardsInfo[1]} />
       </Grid>
+      <Grid item xs={4} sm={4} md={2}>
+        <BestselleryCard CardInfo={CardsInfo[2]} />
+      </Grid>
+      <Grid item xs={4} sm={4} md={2}>
+        <BestselleryCard CardInfo={CardsInfo[3]} />
+      </Grid>
     </Grid>
   )
 };

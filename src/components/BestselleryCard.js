@@ -5,7 +5,6 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
@@ -14,7 +13,32 @@ const useStyles = makeStyles({
     marginTop: 15,
   },
   media: {
-    height: 140,
+    height: 100,
+  },
+  titleBox: {
+    padding: 3,
+  },
+  title: {
+    fontSize: '0.8em',
+    textAlign: 'center',
+    fontWeight: 'bold',
+  },
+  prices: {
+    justifyContent: 'space-around',
+    paddingTop: 1,
+    paddingBottom: 3,
+    backgroundColor: '#ff3f34',
+  },
+  earlierPrice: {
+    fontSize: '0.7em',
+    fontWeight: 'bold',
+    textDecoration: 'line-through',
+    color: 'RGBA(1,2,3,0.3)',
+  },
+  price: {
+    padding: 0,
+    fontSize: '0.8em',
+    fontWeight: 'bold',
   },
 });
 
@@ -28,20 +52,20 @@ const BestselleryCard = ({ CardInfo }) => {
           image={CardInfo.imageUrl}
           title='blabla'
         />
-        <CardContent>
-          <Button size="small" color="primary">
+        <CardContent className={classes.titleBox}>
+          <Typography className={classes.title}>
             {CardInfo.title}
-          </Button>
-          <Typography variant="body2" color="textSecondary" component="p">
-
+          </Typography>
+          <Typography className={classes.title}>
+            {CardInfo.subtitle}
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-        <Typography variant="body2" color="textSecondary" component="p">
+      <CardActions className={classes.prices}>
+        <Typography className={classes.earlierPrice}>
           {CardInfo.earlierPrice}
         </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
+        <Typography className={classes.price}>
           {CardInfo.price}
         </Typography>
       </CardActions>
