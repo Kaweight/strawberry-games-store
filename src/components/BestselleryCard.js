@@ -42,31 +42,31 @@ const useStyles = makeStyles({
   },
 });
 
-const BestselleryCard = ({ CardInfo }) => {
+const BestselleryCard = props => {
   const classes = useStyles();
+  const { imageUrl, title, subtitle, price, earlierPrice } = props
   return (
     <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image={CardInfo.imageUrl}
-          title='blabla'
+          image={imageUrl}
         />
         <CardContent className={classes.titleBox}>
           <Typography className={classes.title}>
-            {CardInfo.title}
+            {title}
           </Typography>
           <Typography className={classes.title}>
-            {CardInfo.subtitle}
+            {subtitle}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions className={classes.prices}>
         <Typography className={classes.earlierPrice}>
-          {CardInfo.earlierPrice}
+          {earlierPrice}
         </Typography>
         <Typography className={classes.price}>
-          {CardInfo.price}
+          {price}
         </Typography>
       </CardActions>
     </Card>
