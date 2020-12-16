@@ -7,7 +7,7 @@ function App() {
   return (
     <Grid container direction='column'>
       <CssBaseline />
-      <Grid item >
+      <Grid item>
         <Header />
       </Grid>
       <Grid item container>

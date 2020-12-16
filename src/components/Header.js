@@ -14,16 +14,29 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import { CardMedia } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
+    marginTop: 5,
+    marginBottom: 5,
+    marginLeft: '4em',
+    marginRight: '4em',
+  },
+  media: {
+    height: 35,
+    width: 35,
+    marginLeft: 10,
+    marginRight: 10,
   },
   menuButton: {
     marginRight: theme.spacing(2),
   },
   title: {
     display: 'none',
+    fontSize: 25,
+    fontFamily: 'Lobster',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
@@ -158,23 +171,20 @@ export default function PrimarySearchAppBar() {
         </IconButton>
         <p>Profile</p>
       </MenuItem>
-    </Menu>
+    </Menu >
   );
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar position="static" style={{ background: '#ff3f34', borderRadius: 32 }}>
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <MenuIcon />
-          </IconButton>
+          <CardMedia
+            className={classes.media}
+            image="/assets/strawberryB.png"
+            title="strawberry"
+          />
           <Typography className={classes.title} variant="h6" noWrap>
-            Material-UI
+            Strawberry
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
@@ -223,6 +233,14 @@ export default function PrimarySearchAppBar() {
               <MoreIcon />
             </IconButton>
           </div>
+          <IconButton
+            edge="start"
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="open drawer"
+          >
+            <MenuIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
       {renderMobileMenu}

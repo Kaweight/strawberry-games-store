@@ -9,18 +9,23 @@ const Content = () => {
 
   const getBestselleryCard = (bestselleryCardObj) => {
     return (
-      <Grid item xs={4} sm={4} md={2}>
+      <Grid item xs={6} sm={4} md={2}>
         <BestselleryCard {...bestselleryCardObj} />
       </Grid>
     )
   }
 
   return (
-    <Grid container spacing={2}>
+    <Grid container
+      justify="center"
+      alignItems="center"
+      spacing={2}>
       <Grid item xs={12} sm={8} md={8}>
         <HotNewsCarousel HotNewInfo={HotNewsInfo} />
       </Grid>
-      {CardsInfo.map(bestselleryCardObj => getBestselleryCard(bestselleryCardObj))}
+      <Grid container spacing={2}>
+        {CardsInfo.map(bestselleryCardObj => getBestselleryCard(bestselleryCardObj))}
+      </Grid>
     </Grid>
   )
 };

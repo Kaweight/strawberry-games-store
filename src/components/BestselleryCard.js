@@ -6,14 +6,15 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import { FullscreenExit } from '@material-ui/icons';
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 110,
-    marginTop: 15,
+    margin: 'auto',
   },
   media: {
-    height: 100,
+    height: 145,
   },
   titleBox: {
     padding: 3,
