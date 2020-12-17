@@ -35,24 +35,29 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     display: 'none',
+    fontFamily: `'Lobster', cursive`,
     fontSize: 25,
-    fontFamily: 'Lobster',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
   },
+  titleSpan: {
+    color: '#009432',
+    fontSize: '1.4em',
+    verticalAlign: 'sub',
+  },
   search: {
     position: 'relative',
-    borderRadius: theme.shape.borderRadius,
+
+    borderRadius: 20,
     backgroundColor: fade(theme.palette.common.white, 0.15),
     '&:hover': {
       backgroundColor: fade(theme.palette.common.white, 0.25),
     },
-    marginRight: theme.spacing(2),
-    marginLeft: 0,
+    marginRight: theme.spacing(0),
     width: '100%',
     [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(3),
+      marginLeft: theme.spacing(8),
       width: 'auto',
     },
   },
@@ -184,7 +189,7 @@ export default function PrimarySearchAppBar() {
             title="strawberry"
           />
           <Typography className={classes.title} variant="h6" noWrap>
-            Strawberry
+            <span className={classes.titleSpan}>S</span>trawberry
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
