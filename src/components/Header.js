@@ -15,6 +15,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import { CardMedia } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -39,12 +40,12 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 25,
     [theme.breakpoints.up('sm')]: {
       display: 'block',
+      '&:first-letter': {
+        color: '#009432',
+        fontSize: '1.4em',
+        verticalAlign: 'sub',
+      },
     },
-  },
-  titleSpan: {
-    color: '#009432',
-    fontSize: '1.4em',
-    verticalAlign: 'sub',
   },
   search: {
     position: 'relative',
@@ -189,7 +190,7 @@ export default function PrimarySearchAppBar() {
             title="strawberry"
           />
           <Typography className={classes.title} variant="h6" noWrap>
-            <span className={classes.titleSpan}>S</span>trawberry
+            <Link to='/'> Strawberry </Link>
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>

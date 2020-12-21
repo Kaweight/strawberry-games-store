@@ -1,5 +1,6 @@
 const CardsInfo = [
   {
+    _id: '1',
     imageUrl: '/assets/cyberpunk1.jpg',
     category: 'RPG',
     title: 'Cyberpunk',
@@ -8,6 +9,7 @@ const CardsInfo = [
     earlierPrice: '$108',
   },
   {
+    _id: '2',
     imageUrl: '/assets/fifa21.jpg',
     category: 'Sport',
     title: 'FIFA 21',
@@ -16,6 +18,7 @@ const CardsInfo = [
     earlierPrice: '$99',
   },
   {
+    _id: '3',
     imageUrl: '/assets/assasin.jpg',
     category: 'RPG',
     title: `Assassin's Creed`,
@@ -24,6 +27,7 @@ const CardsInfo = [
     earlierPrice: '$93',
   },
   {
+    _id: '4',
     imageUrl: '/assets/callofduty.jpg',
     category: 'FPS',
     title: 'Call of Duty',
@@ -32,6 +36,7 @@ const CardsInfo = [
     earlierPrice: '$102',
   },
   {
+    _id: '5',
     imageUrl: '/assets/ageofempires.jpg',
     category: 'Strategy',
     title: `Age of Emipres III`,
@@ -40,6 +45,7 @@ const CardsInfo = [
     earlierPrice: '$93',
   },
   {
+    _id: '6',
     imageUrl: '/assets/immortalsfenyxrising.jpg',
     category: 'Action',
     title: 'Immortals',
@@ -48,6 +54,7 @@ const CardsInfo = [
     earlierPrice: '$102',
   },
   {
+    _id: '7',
     imageUrl: '/assets/sims4.jpg',
     category: 'Simulator',
     title: 'The Sims 4',
@@ -56,6 +63,7 @@ const CardsInfo = [
     earlierPrice: '$93',
   },
   {
+    _id: '8',
     imageUrl: '/assets/diablo2.jpg',
     category: 'RPG',
     title: 'Diablo 2',
@@ -64,6 +72,7 @@ const CardsInfo = [
     earlierPrice: '$102',
   },
   {
+    _id: '9',
     imageUrl: '/assets/avengers.jpg',
     category: 'Action',
     title: `Marvel's Avengers`,
@@ -72,6 +81,7 @@ const CardsInfo = [
     earlierPrice: '$93',
   },
   {
+    _id: '10',
     imageUrl: '/assets/flight.jpg',
     title: 'Call of Duty',
     subtitle: 'Black Ops',
@@ -79,6 +89,7 @@ const CardsInfo = [
     earlierPrice: '$102',
   },
   {
+    _id: '11',
     imageUrl: '/assets/rocketleague.jpg',
     category: 'Sport',
     title: `Rocket League`,
@@ -87,6 +98,7 @@ const CardsInfo = [
     earlierPrice: '$93',
   },
   {
+    _id: '12',
     imageUrl: '/assets/doom.jpg',
     category: 'FPS',
     title: 'Doom',
