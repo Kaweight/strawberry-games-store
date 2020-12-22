@@ -5,7 +5,7 @@ import Header from '../components/Header';
 
 function HomeScreen(props) {
   return (
-<Grid container direction='column'>
+    <Grid container direction='column'>
       <CssBaseline />
       <Grid item>
         <Header />
