@@ -19,19 +19,37 @@ const useStyles = makeStyles({
     backgroundColor: 'grey',
   },
   UpperIcons: {
-
+    display: 'flex',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    paddingBottom: 10,
+    maxWidth: 100,
+    color: 'green',
+    justifyContent: 'space-around',
   },
   BuyNow: {
+    minWidth: 165,
+    maxHeight: 40,
     marginBottom: 12,
-    backgroundColor: 'orange',
+    backgroundColor: '#f39c12',
     padding: 8,
     borderRadius: '1.5rem',
-    textAlign: 'center',
+    justifyContent: 'space-around',
     color: 'white',
     fontWeight: 'bold',
     fontSize: '0.8rem',
+    '& p:nth-child(2)': {
+      fontWeight: 300,
+      opacity: 0.7,
+      textDecoration: 'line-through',
+    },
+    '& p:nth-child(3)': {
+      fontSize: '1.3rem',
+    },
   },
   PayPal: {
+    minWidth: 165,
+    maxHeight: 40,
     marginBottom: 12,
     backgroundColor: '#74b9ff',
     padding: 8,
@@ -39,7 +57,19 @@ const useStyles = makeStyles({
     textAlign: 'center',
     color: 'white',
     fontWeight: 'bold',
-    fontSize: '1rem',
+    fontSize: '1.1rem',
+    justifyContent: 'space-around',
+  },
+  BottomIcons: {
+    display: 'flex',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    maxWidth: 100,
+    color: 'white',
+    justifyContent: 'space-around',
+    '& svg:first-child': {
+      color: 'red',
+    },
   },
   image: {
     maxWidth: 400,
@@ -72,19 +102,19 @@ const ProductScreen = props => {
         <Grid item xs={12} sm={2}>
         <Card className={classes.root} variant="outlined">
       <CardContent>
-        <Typography className={classes.UpperIcons} variant="h5" component="h2">
+        <Typography className={classes.UpperIcons}>
           <LanguageOutlined />
           <ShareOutlined />
         </Typography>
-        <Typography className={classes.BuyNow} gutterBottom>
-          BUY NOW!
-          {product.earlierPrice}
-          {product.price}
-        </Typography>
-        <Typography className={classes.PayPal} color="textSecondary">
+        <Button className={classes.BuyNow}>
+          <p>BUY NOW!</p>
+          <p>{product.earlierPrice}</p>
+          <p>{product.price}</p>
+        </Button>
+        <Button className={classes.PayPal} color="textSecondary">
           KUP Z <i>PayPal</i>
-        </Typography>
-        <Typography variant="body2" component="p">
+        </Button>
+        <Typography className={classes.BottomIcons}>
           <FavoriteBorderOutlined />
           <AccountBalanceWalletOutlined />
         </Typography>
