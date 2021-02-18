@@ -1,11 +1,9 @@
 import React from 'react';
-import CardsInfo from '../static/CardsInfo';
+import data from '../static/CardsInfo';
 import { CssBaseline, Grid } from '@material-ui/core';
 import Header from '../components/Header';
 import { makeStyles } from '@material-ui/core/styles';
-import ProductSaleCard from '../components/ProductSaleCard';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
@@ -79,12 +77,11 @@ const useStyles = makeStyles({
     border: '2px solid blue',
     borderRadius: 15,
   },
-  });
+});
 
 const ProductScreen = props => {
   const classes = useStyles();
-  const product = CardsInfo.find(x => x._id === props.match.params.id);
-  const { imageUrl } = props;
+  const product = data.find(x => x._id === props.match.params.id);
   return (
     <Grid container direction='column'>
       <CssBaseline />
@@ -92,34 +89,34 @@ const ProductScreen = props => {
         <Header />
       </Grid>
       <Grid container
-      justify="center"
-      alignItems="center"
-      spacing={2}>
+        justify="center"
+        alignItems="center"
+        spacing={2}>
         <Grid item xs={false} sm={2} />
         <Grid item xs={12} sm={6}>
           <img className={classes.image} src={product.imageUrl} />
         </Grid>
         <Grid item xs={12} sm={2}>
-        <Card className={classes.root} variant="outlined">
-      <CardContent>
-        <Typography className={classes.UpperIcons}>
-          <LanguageOutlined />
-          <ShareOutlined />
-        </Typography>
-        <Button className={classes.BuyNow}>
-          <p>BUY NOW!</p>
-          <p>{product.earlierPrice}</p>
-          <p>{product.price}</p>
-        </Button>
-        <Button className={classes.PayPal} color="textSecondary">
-          KUP Z <i>PayPal</i>
-        </Button>
-        <Typography className={classes.BottomIcons}>
-          <FavoriteBorderOutlined />
-          <AccountBalanceWalletOutlined />
-        </Typography>
-      </CardContent>
-    </Card>
+          <Card className={classes.root} variant="outlined">
+            <CardContent>
+              <Typography className={classes.UpperIcons}>
+                <LanguageOutlined />
+                <ShareOutlined />
+              </Typography>
+              <Button className={classes.BuyNow}>
+                <p>BUY NOW!</p>
+                <p>{product.earlierPrice}</p>
+                <p>{product.price}</p>
+              </Button>
+              <Button className={classes.PayPal} color="textSecondary">
+                KUP Z <i>PayPal</i>
+              </Button>
+              <Typography className={classes.BottomIcons}>
+                <FavoriteBorderOutlined />
+                <AccountBalanceWalletOutlined />
+              </Typography>
+            </CardContent>
+          </Card>
         </Grid>
         <Grid item xs={false} sm={2} />
       </Grid>

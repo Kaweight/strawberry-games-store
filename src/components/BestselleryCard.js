@@ -6,9 +6,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import { FullscreenExit } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
-import CardsInfo from '../static/CardsInfo';
 
 const useStyles = makeStyles({
   root: {
@@ -51,12 +49,12 @@ const BestselleryCard = props => {
   return (
     <Card className={classes.root}>
       <CardActionArea>
-      <Link to={'/product/' + _id}>
-        <CardMedia
-          className={classes.media}
-          image={imageUrl}
-        />
-      </Link>
+        <Link key={_id} to={'/product/' + _id}>
+          <CardMedia
+            className={classes.media}
+            image={imageUrl}
+          />
+        </Link>
         <CardContent className={classes.titleBox}>
           <Typography className={classes.title}>
             {title}
